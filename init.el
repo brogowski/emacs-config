@@ -88,7 +88,8 @@
 
 (use-package org
   :init
-  (setq org-startup-indented t))
+  (setq org-startup-indented t)
+  (setq org-agenda-files '("~/org")))
 
 (defun my/org-mode-visual-fill ()
   (setq visual-fill-column-width 100
