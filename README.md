@@ -1,0 +1,1 @@
+# Emacs config borrowed from https://github.com/flyingmachine/emacs-for-clojure and modified a bit
