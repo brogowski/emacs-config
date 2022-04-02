@@ -69,11 +69,6 @@
     ;; of ido
     ido-completing-read+
 
-    ;; Enhances M-x to allow easier execution of commands. Provides
-    ;; a filterable list of possible commands in the minibuffer
-    ;; http://www.emacswiki.org/emacs/Smex
-    smex
-
     ;; project navigation
     projectile
 
@@ -89,7 +84,9 @@
 (use-package org
   :init
   (setq org-startup-indented t)
-  (setq org-agenda-files '("~/org")))
+  (setq org-agenda-files '("~/org"))
+  (setq org-todo-keywords
+        '((sequence "TODO(t)" "DOING(d)" "|" "COMPLETE(c)"))))
 
 (defun my/org-mode-visual-fill ()
   (setq visual-fill-column-width 100
@@ -162,7 +159,7 @@
  '(custom-safe-themes
    '("47db50ff66e35d3a440485357fb6acb767c100e135ccdf459060407f8baea7b2" "da186cce19b5aed3f6a2316845583dbee76aea9255ea0da857d1c058ff003546" "1d5e33500bc9548f800f9e248b57d1b2a9ecde79cb40c0b1398dec51ee820daf" "a6e620c9decbea9cac46ea47541b31b3e20804a4646ca6da4cce105ee03e8d0e" "1704976a1797342a1b4ea7a75bdbb3be1569f4619134341bd5a4c1cfb16abad4" "835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "7f1263c969f04a8e58f9441f4ba4d7fb1302243355cb9faecb55aec878a06ee9" "9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" "1157a4055504672be1df1232bed784ba575c60ab44d8e6c7b3800ae76b42f8bd" "cf08ae4c26cacce2eebff39d129ea0a21c9d7bf70ea9b945588c1c66392578d1" "5ee12d8250b0952deefc88814cf0672327d7ee70b16344372db9460e9a0e3ffc" "52588047a0fe3727e3cd8a90e76d7f078c9bd62c0b246324e557dfa5112e0d0c" default))
  '(package-selected-packages
-   '(visual-fill-column org doom-themes which-key doom-modeline marginalia orderless vertigo vertico use-package clj-refactor magit tagedit rainbow-delimiters projectile smex ido-completing-read+ cider clojure-mode-extra-font-locking clojure-mode paredit exec-path-from-shell)))
+   '(visual-fill-column org doom-themes which-key doom-modeline marginalia orderless vertigo vertico use-package clj-refactor magit tagedit rainbow-delimiters projectile ido-completing-read+ cider clojure-mode-extra-font-locking clojure-mode paredit exec-path-from-shell)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
