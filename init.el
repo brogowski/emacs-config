@@ -16,8 +16,6 @@
              '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives
-             '("org" . "https://orgmode.org/elpa/") t)
 
 (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 (add-to-list 'package-pinned-packages '(magit . "melpa-stable") t)
@@ -88,10 +86,13 @@
   (setq org-todo-keywords
         '((sequence "TODO(t)" "DOING(d)" "|" "COMPLETE(c)"))))
 
+;; Try to center org files content and wrap lines by words
 (defun my/org-mode-visual-fill ()
   (setq visual-fill-column-width 100
         visual-fill-column-center-text t)
-  (visual-fill-column-mode 1))
+  (visual-fill-column-mode 1)
+  (toggle-truncate-lines)
+  (visual-line-mode))
 
 (use-package visual-fill-column
   :hook (org-mode . my/org-mode-visual-fill))
