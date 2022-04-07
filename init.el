@@ -131,6 +131,7 @@
   :custom
   (org-roam-directory "~/org/notes")
   (org-roam-dailies-directory "journal/")
+  (org-roam-node-display-template "${title} ${tags}")
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)         
          ("C-c n i" . org-roam-node-insert)
