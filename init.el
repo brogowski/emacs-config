@@ -150,6 +150,9 @@
   :custom
   (gts-translate-list '(("pl" "en"))))
 
+(add-to-list 'gts-picker-lang-match-alist
+             (cons "pl" "^[a-zA-Z\u0105-\u017b,.;_ ]+$"))
+
 (defun my/go-translate ()
   (interactive)
   (gts-translate (gts-translator
